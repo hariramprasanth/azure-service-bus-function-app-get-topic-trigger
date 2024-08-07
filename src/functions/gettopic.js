@@ -1,8 +1,8 @@
 const { app } = require('@azure/functions');
 
 app.serviceBusTopic("gettopic", {
-	connection: "Endpoint=sb://servicebus435.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=iZzcUZ2oCEdOk5fLX3h4TSRdKtTWfqeN9+ASbGztsmE=",
-	topicName: "topic1",
+	connection: "servicebus435_SERVICEBUS", // set environment value servicebus435_SERVICEBUS=<connectionstring>
+	topicName: "topic1", // this can also set as env variables
 	subscriptionName: "sub1",
 	handler: (message, context) => {
 		context.log("------------------------------------------- GET TOPIC ---------------------------------------------------");
